@@ -20,7 +20,7 @@
 extern int asn_debug;
 
 #ifdef	_WIN32
-
+#include <stdint.h>
 #include <malloc.h>
 #define	 snprintf	_snprintf
 #define	 vsnprintf	_vsnprintf
