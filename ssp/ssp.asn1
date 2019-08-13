@@ -1,0 +1,58 @@
+SspDef DEFINITIONS ::=BEGIN
+
+    Asn1cTestFloat ::= SEQUENCE{
+		btest1 REAL,
+		assServerAccPointRef PrintableString ,
+		btest2 BOOLEAN,			
+		assAuthPara PrintableString ,
+	}
+/*	
+	Asn1cStdTest ::= SEQUENCE{
+		btest1 BOOLEAN,			
+		itest2 INTEGER(0..12),
+		assServerAccPointRef PrintableString ,
+		btest2 BOOLEAN,			
+		assAuthPara PrintableString ,
+		btest3 BOOLEAN,	
+		itest1 INTEGER
+	}
+	
+	Asn1cTestSeqOf ::= SEQUENCE OF PrintableString
+
+	StrRef ::= PrintableString
+	
+	Asn1cTestSeqOf ::= SEQUENCE{		
+		lnRef SEQUENCE OF StrRef
+	}
+	
+	
+	
+	
+	
+	-- 开始编码 --
+	ReqAss ::= SEQUENCE{
+		assServerAccPointRef PrintableString,
+		assPduSize INTEGER,
+		assAuthPara PrintableString 
+	}
+	
+	ReqAssObt ::= SEQUENCE{
+		assId OCTET STRING,
+		ResErr
+	}
+	
+	ResAssOK ::= SEQUENCE{
+		assId OCTET STRING,
+		assPduSize INTEGER,
+		ResErr
+	}
+	
+	ResErr ::= INTEGER(0..12)
+	
+	ReqSrvDir ::= INTEGER(0..2)
+	
+	SeqOfStr ::= SEQUENCE OF PrintableString
+	
+	*/
+	
+END
