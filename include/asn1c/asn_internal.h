@@ -15,7 +15,7 @@
 #include <assert.h>		/* for assert() macro */
 #endif
 
-#include <talloc.h>
+//#include <talloc.h>
 
 #ifdef	__cplusplus
 extern "C" {
@@ -27,10 +27,19 @@ int get_asn1c_environment_version(void);	/* Run-time version */
 
 extern void *talloc_asn1_ctx;
 
+#ifdef WIN32
+#define	CALLOC(nmemb, size)	calloc(nmemb, size)
+#define	MALLOC(size)		malloc(size)
+#define	REALLOC(oldptr, size)	realloc(oldptr, size)
+#define	FREEMEM(ptr)		free(ptr)
+#endif
+
+#ifdef LINUX
 #define	CALLOC(nmemb, size)	talloc_zero_size(talloc_asn1_ctx, (nmemb) * (size))
 #define	MALLOC(size)		talloc_size(talloc_asn1_ctx, size)
 #define	REALLOC(oldptr, size)	talloc_realloc_size(talloc_asn1_ctx, oldptr, size)
 #define	FREEMEM(ptr)		talloc_free(ptr)
+#endif
 
 #define	asn_debug_indent	0
 #define ASN_DEBUG_INDENT_ADD(i) do{}while(0)

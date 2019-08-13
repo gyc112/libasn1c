@@ -1,6 +1,8 @@
 #pragma once
 
+#ifdef LINUX
 #include <unistd.h>
+#endif
 
 #include "asn_system.h"
 #include "BIT_STRING.h"

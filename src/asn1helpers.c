@@ -9,7 +9,14 @@
 
 #include <string.h>
 #include <errno.h>
+
+#ifdef WIN32
+#include<WinSock2.h>
+#pragma comment(lib,"ws2_32.lib")
+#endif
+#ifdef LINUX
 #include <arpa/inet.h>
+#endif
 
 #include "asn1helpers.h"
 #include "asn_internal.h"

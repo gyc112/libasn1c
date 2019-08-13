@@ -10,6 +10,11 @@ uper_encode(asn_TYPE_descriptor_t *td, void *sptr, asn_app_consume_bytes_f *cb, 
 	return uper_encode_internal(td, 0, sptr, cb, app_key);
 }
 
+asn_enc_rval_t aper_encode(asn_TYPE_descriptor_t *td, void *sptr, asn_app_consume_bytes_f *cb, void *app_key) {
+		return aper_encode_internal(td, 0, sptr, cb, app_key);
+}
+
+
 /*
  * Argument type and callback necessary for uper_encode_to_buffer().
  */

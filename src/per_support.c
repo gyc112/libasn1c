@@ -302,13 +302,13 @@ ssize_t
 aper_get_nsnnwn(asn_per_data_t *pd, int range) {
 	ssize_t value;
 	int bytes = 0;
+	int i;
 
 	ASN_DEBUG("getting nsnnwn with range %d", range);
 
 	if(range <= 255) {
 		if (range < 0) return -1;
 		/* 1 -> 8 bits */
-		int i;
 		for (i = 1; i <= 8; i++) {
 			int upper = 1 << i;
 			if (upper >= range)
